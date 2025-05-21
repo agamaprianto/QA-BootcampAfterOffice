@@ -1,0 +1,11 @@
+Feature: Shopping Cart functionality
+
+  Scenario: Add item to cart
+    Given I am logged in
+    When I add an item to the cart
+    Then the cart badge should show 1
+
+  Scenario: Remove item from cart
+    Given I have an item in the cart
+    When I remove the item
+    Then the cart badge should not exist

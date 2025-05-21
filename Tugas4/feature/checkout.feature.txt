@@ -1,0 +1,8 @@
+Feature: Checkout functionality
+
+  Scenario: Successful checkout
+    Given I have an item in the cart
+    When I proceed to checkout and fill valid info
+    Then I should see the Checkout: Overview page
+    And I complete the order
+    Then I should see the order confirmation
